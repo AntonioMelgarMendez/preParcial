@@ -6,6 +6,9 @@
     font-family:'Teko';
     
 }
+:root{
+    --acent_color: #50bce3;
+}
 @font-face {
     font-family: 'Teko';
     font-style: normal;
@@ -57,6 +60,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        z-index: 2;
     }
     
     .image-content::before {
@@ -84,7 +88,9 @@
         }
     }
     
-    
+    .content{
+        padding-top: 7em;
+     }
     .image-content img {
         width: 50%; 
         height: auto; 
@@ -107,6 +113,8 @@
         width: 100%;
         font-size: 1em;
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        position: fixed;
+        z-index:10;
     }
     
     .navbar img {
@@ -132,29 +140,37 @@
         text-transform: uppercase;
         font-weight: 700;
         padding: 1em 2em;
-        display: block;
+        display: inline-block;
+        position: relative;
+        transition: color 0.3s ease;
+    }
+    /*Hover extraido de chat gpt para hacer la linea de color al pasar por arriba*/
+    .navbar-item a::after {
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 2px;
+        left: 0; 
+        bottom: 0; 
+        background: var(--acent_color);
+        transition: width 0.3s ease;
     }
     
-    .navbar-item a:hover {
-        background-color: rgb(2, 2, 2);
-        color: rgb(255, 255, 255);
+    .navbar-item a:hover::after {
+        width: 100%; 
     }
+    
     .navbar-option {
         background-color: rgb(0, 0, 0);
         align-items: center;
         color: white;
         border: none;
-        clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%);
-        position:relative;
         margin: 1em;
     }
     .navbar-option:hover {
         cursor: pointer;
-        background-color: white;
-        border: 0.1em black solid;
-        color: black;
-    
-    
+        border-bottom: 1rem solid var(--acent_color);
+        transition: border-bottom 0.3s ease;
     }
     .benefits{
         width: 70%; 
@@ -162,46 +178,46 @@
         height: auto;
         padding: 2em;
         margin-top: 2em;
-        background-color: #fff;
-        border-radius: 10px; 
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
-        border-radius: 20px;
-    
+        background-color: #fff;  
+        text-align: left;  
+
+       
     }
     .benefits-title {
         display: flex;
-        align-items:baseline;
         gap: 0.3em;
+      
     }
 
     .benefits h2{
         font-size: 5em;
         text-align: center;
         color: rgb(0, 0, 0);
+        margin-bottom: 0.5em;
+       
     }
     .benefits h3{
-        font-size: 2em;
+        font-size: 2.5em;
         text-align: center;
-        background-color: black;
+        background-color:var(--acent_color);
         color: white;
     }
     .benefits h4{
-        text-align: left;
+        text-align: justify;
         font-size: 2em;
     }
+    .benefits h5{
+        text-align:justify;
+        font-size: 1.1em;
+    }
     .benefits-container {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
         margin: 0 auto; 
         height: auto;
+        border: #000000 solid 0.15em;
     }
     .benefits-container li{
         list-style:none;
         padding: 1em;
-    }
-    .benefits-container img{
-        width: 80%;
-        
     }
     .products h2{
         font-size: 5em;
@@ -256,8 +272,14 @@
         margin-top: 1em;
         text-align: center;
     }
+    .testimonials h3{
+        border: 2px black solid;
+        background-color: #000000;
+        color: #fff;
+    }
     .testimonials h4{
         text-align: center;
+
     }
     .container-testimonials{
       margin-top: 2em;
@@ -271,7 +293,8 @@
         align-items: center; 
         gap: 1rem; 
         width: 90%;
-        margin: 0 auto;
+        margin: 0 auto 7em;
+       
     }
     
     .container-testimonials li {
@@ -288,6 +311,7 @@
         border: 3px solid #000000;
         transition: transform 0.3s ease;
         box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); 
+       
     }
     .container-testimonials li:hover{
         cursor: pointer;
@@ -304,7 +328,92 @@
     }
     
     .container-testimonials p {
-        font-size: 0.8rem; 
+        font-size: 0.9rem; 
+    }
+
+    .nutrition-container h2{
+        text-align: center;
+        font-size: 5em;
+    }
+    .nutrition-container {
+        display: flex;
+        flex-direction: column;
+        align-items:end;
+        text-align:center;
+        background-color: #fff;
+        padding: 1rem;
+        width: 80%;
+        margin: 0 auto 0; 
+        background-image: url(../resources/img/background.png);
+        background-position: left top; 
+        background-size: 70%; 
+        background-repeat: no-repeat;
+
+    }
+    
+    .nutrition-info {
+       
+        display: flex;
+        align-items: center;
+        gap: 1rem;
+        width: 100%; 
+    }
+    .nutrition-info img {
+        width: 30em;
+        height: 40em;
+        padding: 1rem;
+        animation: float 3s ease-in-out infinite;
+    }
+    
+    @keyframes float {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-1em); 
+        }
+    }
+    
+    .nutrition-info p {
+        font-size: 1.5rem;
+        line-height: 1.5;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+        padding: 0.75em;
+    }
+    .nutrition-info button {
+        background-color: black;
+        color: white; 
+        border: 2.5px solid black;
+        padding: 0.5em 1em; 
+        font-size: 1.2em; 
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        transition: background-color 0.3s ease, transform 0.3s ease; /* Transiciones suaves */
+        cursor: pointer; 
+    }
+    
+    .nutrition-info button:hover {
+        background-color: #008cba; 
+        transform: scale(1.05); 
+    }
+    
+    .nutrition-facts-header{
+    
+        border-radius: 1rem;
+    }
+    .nutrition-facts-header button{
+        font-size: 1.3rem;
+        font-weight: 400;
+        text-transform: uppercase;
+    }
+    
+    .nutrition-info button:hover {
+        cursor: pointer;
+        background-color: white;
+        border: 0.1em black solid;
+        color: black;
+
+    
+    
     }
     
     
@@ -313,8 +422,13 @@
     
 @media (max-width: 1024px) {
     .navbar{
-        height: 13vh;
+        height: 15vh;
         font-size:1em ;
+        width: 100%;
+        position: fixed;
+    }
+    .navbar-item a{
+        padding: 0.3em;
     }
     .menu-toggle {
         display: none;
@@ -326,7 +440,12 @@
         display: grid;
         grid-template-columns: 2fr 1fr; 
     }
+    .carrousel-container{
+        width: 80%;
+    }
+
     .benefits-container img{
+    
         width: 100%;
     }
     .container-testimonials ul { 
@@ -349,8 +468,9 @@
     .navbar {
         padding: 0.5em;
         justify-content: center; 
-        height: 14vh;
+        height: 20vh;
         font-size: 1.1em;
+        width: 100%;
     }
 
     .navbar-members {
@@ -361,7 +481,7 @@
 
     .navbar-item {
         margin: 0;
-        padding: 0.5em 1em; 
+        padding:0.5em;
     }
 
     .navbar-item a {
@@ -451,7 +571,6 @@
         color: white;
         padding: 1em;
         font-weight: bolder;
-        clip-path: polygon(10% 0%, 100% 0%, 100% 90%, 90% 100%, 0% 100%, 0% 10%);
     }
     .menu-toggle:hover{
         color: black;
