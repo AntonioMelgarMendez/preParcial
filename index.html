@@ -10,6 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300..700&display=swap" rel="stylesheet">
     <script src="./js/scripts.js"></script>
     <script src="https://kit.fontawesome.com/ce5713a008.js" crossorigin="anonymous"></script>
+    <link rel="shortcut icon" type="image/x-icon" href="/resources/img/favicon.png" />
 </head>
 <body>
     <nav class="navbar">
@@ -222,85 +223,96 @@
         <section class="benefits">
             <h2>Benefits of Monster</h2>
             
-            <div class="benefits-container">
-                <h3>Behind the claw</h3>
-                <ul>
-                    <li>
-                        <div class="benefits-title">
-                            <h4>
-                                Caffeine Shot
-                            </h4>
-                            <i class="fa-solid fa-bolt fa-2x"></i>
+            <div class="tabs">
     
+                <input type="radio" id="tab1" name="tab" checked>
+                <input type="radio" id="tab2" name="tab">
+                <input type="radio" id="tab3" name="tab">
+    
+         
+                <div class="tab-titles">
+                    <label for="tab1">Caffeine Shot</label>
+                    <label for="tab2">Taurine Boost</label>
+                    <label for="tab3">B Vitamins</label>
+                </div>
+        
+                <div class="tab-content">
+                    <div class="content content-1">
+                        <div class="tab-header">
+                            <h3>Caffeine Shot</h3>
+                            <i class="fa-solid fa-bolt fa-2x"></i>
                         </div>
-                    
-                        <h5>
-                            Caffeine can lead to increased physical endurance, alertness, increased focus, and improved reaction time
-                        </h5>
+                        <h5>Caffeine can lead to increased physical endurance, alertness, increased focus, and improved reaction time</h5>
                         <p>
-                            Caffeine has been safely consumed for hundreds of years, in hundreds of countries by billions of people. Caffeine is one of the most studied ingredients in the food supply. The brain makes chemicals that affect the body.
+                            Caffeine is a natural stimulant most commonly found in coffee, tea, and various energy drinks. It works by stimulating the brain and central nervous system, helping you stay alert and prevent the onset of tiredness. When consumed in moderate amounts, caffeine can help improve endurance by allowing athletes to push themselves further without feeling fatigued as quickly.
                         </p>
-                    </li>
-                    <li>
-                        <div class="benefits-title">
-                            <h4>
-                                Taurine Boost
-                            </h4>
-                            
+                        <p>
+                            Additionally, caffeine has been shown to improve memory and cognitive function, making it a favorite for those in mentally demanding professions. The energizing effects can also enhance motor skills and reaction times, providing a competitive edge in both physical and mental tasks. However, it is essential to balance caffeine intake, as excessive consumption can lead to jitters or anxiety.
+                        </p>
+                    </div>
+        
+                    <div class="content content-2">
+                        <div class="tab-header">
+                            <h3>Taurine Boost</h3>
                             <i class="fa-solid fa-heart fa-2x"></i>
                         </div>
-                        <h5>
-                            Taurine is essential for skeletal muscle function and can increase physical endurance
-                        </h5>
-                        <p>Taurine is not a stimulant! Taurine is found naturally in the human body and is an ingredient in baby formula. Taurine also helps protect the heart from overexertion by regulating calcium.
+                        <h5>Taurine is essential for skeletal muscle function and can increase physical endurance</h5>
+                        <p>
+                            Taurine is an amino acid that plays a vital role in numerous biological processes. Found naturally in the body, it helps with muscle contraction, maintaining proper hydration, and supporting nervous system health. Unlike caffeine, taurine is not a stimulant but a natural ingredient that aids in muscle recovery and reduces fatigue after intense physical activity.
                         </p>
-                    </li>
-                    <li>
-                        <div class="benefits-title">
-                            <h4>
-                                B Vitamins
-                            </h4>
+                        <p>
+                            Taurine is often used by athletes because it promotes cardiovascular health by regulating blood pressure and improving blood flow during exercise. Studies have also shown that taurine can act as an antioxidant, protecting cells from damage caused by oxidative stress during exercise. Its inclusion in energy drinks helps support overall endurance without the crash often associated with stimulants.
+                        </p>
+                        <p>
+                            Furthermore, taurine helps with the regulation of calcium levels in the body, which is crucial for heart function, and can enhance muscle repair. Its role in energy production ensures that the body can perform longer and recover faster.
+                        </p> 
+                    </div>
+        
+                    <div class="content content-3">
+                        <div class="tab-header">
+                            <h3>B Vitamins</h3>
                             <i class="fa-solid fa-circle-up fa-2x"></i>
                         </div>
-                    
-                        <h5>
-                            B Vitamins help the body produce energy from food
-                        </h5>
+                       
+                        <h5>B Vitamins help the body produce energy from food</h5>
                         <p>
-                            B Vitamins are found in natural foods such as meats, eggs, fish, dairy products, and leafy greens. They are essential nutrients that play a wide range of benefical roles such as helping the body convert carbohydrates to energy. 
+                            B Vitamins are a group of water-soluble vitamins that play key roles in cell metabolism. They help convert carbohydrates into glucose, which is used to produce energy. They are also vital for the metabolism of fats and proteins, ensuring that the body can efficiently turn food into fuel. This makes B Vitamins crucial for maintaining energy levels, especially during long periods of physical or mental exertion.
                         </p>
-                    </li>
-                </ul>
+                        <p>
+                            Each B Vitamin has a specific function: Vitamin B1 (thiamine) supports nerve function; Vitamin B2 (riboflavin) aids in energy production; Vitamin B3 (niacin) helps maintain healthy skin and nerve function; Vitamin B6 supports immune function and mood regulation; and Vitamin B12 is essential for red blood cell formation and DNA synthesis. A deficiency in B Vitamins can lead to fatigue, irritability, and even muscle weakness.
+                        </p>
+                        <p>
+                            Energy drinks often include a variety of B Vitamins because they are essential for preventing energy dips and keeping metabolism running efficiently. Whether you’re pushing through a workout or a busy day at work, B Vitamins ensure that your body can produce the energy it needs to keep you going strong.
+                        </p>
+                    </div>
+                </div>
             </div>
-    
         </section>
-       
+        
         <section class="testimonials">
             <h2>Testimonials</h2>
             <div class="container-testimonials">
-                <ul>
-                    <li>
-                        <img src="./resources/img/profiles/user1.jpg" alt="Profile Picture">
-                        <p>The white Monster was instrumental in my research, leading to breakthroughs in cures for several critical diseases, including COVID-19 and monkeypox.</p>
-                        <h3>Dr. Emily Carter</h3>
-                        <h4>Harvard Medical </h4>
-                    </li>                
-                    <li>
-                        <img src="./resources/img/profiles/profile2.png" alt="">
-                        <p>Monster Energy has been my secret weapon for staying energized and focused during long streaming sessions. Its refreshing taste and energy boost help me maintain my enthusiasm and engagement with my audience.</p>
-                        <h3>Kai Cenat</h3>
-                        <h4>Streamer</h4>
-                    </li>
-                    <li>
-                        <img src="./resources/img/profiles/profile3.png" alt="">
-                        <p>Monster Energy has been a game-changer. The energy boost and focus it provides have been crucial during long practice sessions and intense races. It helped me stay sharp and maintain peak performance.</p>
-                        <h3>Charles Lecrec</h3>
-                        <h4>Formula 1 Driver</h4>
-                    </li>
-                </ul>
+                <div class="testimonial">
+                    <img src="./resources/img/profiles/user1.jpg" alt="Profile Picture" class="testimonial-img">
+                    <h3>Dr. Emily Carter</h3>
+                    <h4>Harvard Medical</h4>
+                    <p class="testimonial-quote">“The white Monster was instrumental in my research, leading to breakthroughs in cures for several critical diseases, including COVID-19 and monkeypox.”</p>
+                </div>
+                <div class="testimonial">
+                    <img src="./resources/img/profiles/profile2.png" alt="Profile Picture" class="testimonial-img">
+                    <h3>Kai Cenat</h3>
+                    <h4>Streamer</h4>
+                    <p class="testimonial-quote">“Monster Energy has been my secret weapon for staying energized and focused during long streaming sessions. Its refreshing taste and energy boost help me maintain my enthusiasm and engagement with my audience.”</p>
+                </div>
+                <div class="testimonial">
+                    <img src="./resources/img/profiles/profile3.png" alt="Profile Picture" class="testimonial-img">
+                    <h3>Charles Lecrec</h3>
+                    <h4>Formula 1 Driver</h4>
+                    <p class="testimonial-quote">“Monster Energy has been a game-changer. The energy boost and focus it provides have been crucial during long practice sessions and intense races. It helped me stay sharp and maintain peak performance.”</p>
+                </div>
             </div>
         </section>
-       
+        
         <section>
             <div class="nutrition-container">
               <div class="nutrition-info">
@@ -317,86 +329,55 @@
               </div>
             </div>
         </section>
-        <section>
+        <section class="contact-section">
             <div class="container-form">
-                <div class="container-form-image">
-                    <img src="" alt="">
-                </div>
-                <div>
-                    <div class="container-form-title">Contact</div>
-                    <form action="#">
-                        <label for="fname">Name:</label><br>
-                        <input type="text" id="fname" name="fname" value=""><br>
-                        <label for="mail">email:</label><br>
-                        <input type="email" id="mail" name="mail" value""><br><br>
-                        <label for="message"></label>
-                        <textarea name="message" id="message"></textarea>
-                        <input type="submit" value="Submit">
-                    </form> 
-                </div>
+                <div class="container-form-title">Contact</div>
+                <form action="#">
+                    <label for="fname">Name:</label><br>
+                    <input type="text" id="fname" name="fname" value=""><br>
+                    <label for="mail">Email:</label><br>
+                    <input type="email" id="mail" name="mail" value=""><br><br>
+                    <label for="message">Message:</label><br>
+                    <textarea name="message" id="message"></textarea>
+                    <input type="submit" value="Send Message">
+                </form>
             </div>
         </section>
         <footer>
             <div class="footer-container">
-                <ul>
-                    <li>
-                        <img src="" alt="">
-                    </li>
-                    <li>
-                        <p>Monster Energy Company</p>
-                        <p>All Rights Reserved</p>
-                    </li>
-                </ul>
-                <ul>
-                    <li>
-                        <h3>Company</h3>
-                    </li>
-                    <li>
-                        <ul>
-                            <li><p>Terminos y condiciones</p></li>
-                            <li><p>Terminos y condiciones</p></li>
-                            <li><p>Terminos y condiciones</p></li>
-                            <li><p>Terminos y condiciones</p></li>
-                            <li><p>Terminos y condiciones</p></li>
-                            <li><p>Terminos y condiciones</p></li>
-                            <li><p>Terminos y condiciones</p></li>
-                        </ul>
-                    </li>
-                </ul>
-                <ul>
-                    <li><h3>Soporte</h3></li>
+                <div class="footer-section">
+                    <img src="./resources/img/logosymbol.png" alt="Logo" class="footer-logo">
+                    <p>Monster Energy Company</p>
+                    <p>All Rights Reserved</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Company</h3>
                     <ul>
                         <li><p>Terminos y condiciones</p></li>
-                        <li><p>Terminos y condiciones</p></li>
-                        <li><p>Terminos y condiciones</p></li>
-                        <li><p>Terminos y condiciones</p></li>
+                        <li><p>Política de privacidad</p></li>
+                        <li><p>Contactar</p></li>
                     </ul>
-                </ul>
-                <ul>
-                    <li><h3>Soporte</h3></li>
+                </div>
+                <div class="footer-section">
+                    <h3>Soporte</h3>
                     <ul>
-                        <li><p>Terminos y condiciones</p></li>
-                        <li><p>Terminos y condiciones</p></li>
-                        <li><p>Terminos y condiciones</p></li>
-                        <li><p>Terminos y condiciones</p></li>
+                        <li><p>FAQ</p></li>
+                        <li><p>Ayuda</p></li>
+                        <li><p>Contacto</p></li>
                     </ul>
-                </ul>
-                <ul>
-                    <li><h3>Siguenos</h3></li>
-                    <li>
-                        <ul>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                            <li><img src="" alt=""></li>
-                        </ul>
-                    </li>
-    
-                </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Siguenos</h3>
+                    <ul class="social-media">
+                        <li><i class="fa-brands fa-facebook fa-2x"></i></li>
+                        <li><i class="fa-brands fa-twitter fa-2x"></i></li>
+                        <li><i class="fa-brands fa-instagram fa-2x"></i></li>
+                        <li><i class="fa-brands fa-youtube fa-2x"></i></li>
+                    </ul>
+                </div>
             </div>
         </footer>
+        
 
     </div>
     
